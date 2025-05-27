@@ -9,7 +9,6 @@ import { useState } from "react";
 
 export default function UI() {
   const [searchInput, setSearchInput] = useState("");
-  
 
   return (
     <div className="w-2/3 mx-auto flex flex-col items-center py-10 gap-2">
@@ -19,7 +18,7 @@ export default function UI() {
         setSearchInput={setSearchInput}
       />
       <FileDragDropZone />
-      <DropboxImageList />
+      <DropboxImageList searchInput={searchInput} />
     </div>
   );
 }
